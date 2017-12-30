@@ -16,9 +16,11 @@ class QueueWithMax
   end
 
   def enqueue(val)
+    @store.unshift(val)
   end
 
   def dequeue
+    @store.pop
   end
 
   def max
