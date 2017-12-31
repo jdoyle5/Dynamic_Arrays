@@ -24,6 +24,8 @@ class QueueWithMax
   end
 
   def max
+    sorted = @store.sort 
+    sorted.last
   end
 
   def length
