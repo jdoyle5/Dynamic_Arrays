@@ -24,8 +24,13 @@ class QueueWithMax
   end
 
   def max
-    sorted = @store.sort 
-    sorted.last
+    highest = @store[0]
+    (0...store.length).each do |idx|
+      if @store[idx] > highest
+        highest = @store[idx]
+      end
+    end
+    highest
   end
 
   def length
